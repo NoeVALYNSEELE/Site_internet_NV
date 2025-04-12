@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Applique un box-sizing global pour un meilleur contrôle des dimensions */
+* {
+  box-sizing: border-box;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les paddings par défaut */
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, rgb(161, 179, 197), rgb(180, 193, 206));
+  color: rgb(26, 26, 26);
+}
+
+h1 {
+  font-size: 3em; /* Taille relative */
+  position: relative;
+  bottom: 40px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0 auto; /* Centre horizontalement */
+  max-width: 80%; /* Limite la largeur pour éviter les chevauchements */
+  transition: all 0.3s ease-in-out;
+}
+
+.sous-titre {
+  font-size: 1.7em; /* Taille relative */
+  font-style: italic;
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0 auto; /* Centre horizontalement */
+  max-width: 70%; /* Limite la largeur pour éviter les chevauchements */
+  transition: all 0.3s ease-in-out;
+}
+
+h1, .sous-titre {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+h1:hover, .sous-titre:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); /* Ombre uniquement sur le texte */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin-top: 20px; /* Ajoute un espace entre les éléments */
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 20px;
+  width: 300px; /* Réduit légèrement la largeur des cartes */
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  color: rgb(30, 30, 30);
+}
+
+.card p {
+  font-size: 1.1em;
+  color: rgb(85, 85, 85);
+}
+
+.card:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.menu_icone {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.menu_icone:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 63px;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.photo-card {
+  display: block;
+  width: 100%; /* L'image occupe toute la largeur de la carte */
+  height: auto;
+  max-width: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 0 auto; /* Centre l'image dans la carte */
+  transition: transform 0.3s;
+}
+
+.photo-card:hover{
+    transform: scale(0.9);
+}
+
+.container .card:nth-child(2) .photo-card {
+    margin-top: 25px;
+    width: 90%; /* Réduit la largeur de l'image */
+    max-width: 120px; /* Limite la taille maximale */
+    height: auto; /* Maintient les proportions */
+
+  }
+
+  .container .card:nth-child(3) .photo-card {
+    margin-top: 30px;
+    width: 40%; /* Réduit la largeur de l'image */
+    height: auto; /* Maintient les proportions */
+
+  }
